@@ -20,4 +20,12 @@ public class TestController {
 		carList.add("Mercedes");
 		return new ResponseEntity<>(carList,HttpStatus.OK);
 	}
+	
+	@GetMapping("/getFruitList")
+	private ResponseEntity<?> getFruitList(){
+		List<String> fruitList = new ArrayList<>();
+		fruitList.add("Apple");
+		fruitList.add("Orange");
+		return new ResponseEntity<>(fruitList,HttpStatus.OK);
+	}
 }
