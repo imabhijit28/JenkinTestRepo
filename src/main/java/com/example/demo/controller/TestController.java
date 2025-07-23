@@ -28,4 +28,12 @@ public class TestController {
 		fruitList.add("Orange");
 		return new ResponseEntity<>(fruitList,HttpStatus.OK);
 	}
+	
+	@GetMapping("/getVegList")
+	private ResponseEntity<?> getVegList(){
+		List<String> vegList = new ArrayList<>();
+		vegList.add("Potato");
+		vegList.add("Tomato");
+		return new ResponseEntity<>(vegList,HttpStatus.OK);
+	}
 }
